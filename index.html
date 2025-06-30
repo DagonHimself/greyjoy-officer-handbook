@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Greyjoy Officer Handbook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to enhance the theme */
+        body {
+            font-family: 'Lora', serif;
+            background-color: #1a202c;
+            background-image: url('https://www.transparenttextures.com/patterns/dark-denim-3.png');
+            color: #cbd5e0;
+        }
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        .handbook-container {
+            background-color: rgba(26, 32, 44, 0.8);
+            backdrop-filter: blur(4px);
+            border: 2px solid #4a5568;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 5xl;
+            margin: 2rem auto;
+            border-radius: 0.5rem;
+        }
+        .kraken-sigil {
+            filter: drop-shadow(0 0 8px #d4af37); /* Gold glow */
+        }
+        .themed-hr {
+            border: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, rgba(212, 175, 55, 0), rgba(212, 175, 55, 0.75), rgba(212, 175, 55, 0));
+            margin: 2rem 0;
+        }
+        .themed-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #4a5568;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .themed-table th, .themed-table td {
+            border-top: 1px solid #4a5568;
+        }
+        .themed-table th {
+            background-color: rgba(45, 55, 72, 0.5);
+            font-family: 'Cinzel', serif;
+        }
+        .themed-table tr:first-child th:first-child { border-top-left-radius: 0.5rem; }
+        .themed-table tr:first-child th:last-child { border-top-right-radius: 0.5rem; }
+        .themed-table tr:last-child td:first-child { border-bottom-left-radius: 0.5rem; }
+        .themed-table tr:last-child td:last-child { border-bottom-right-radius: 0.5rem; }
+
+        .themed-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 0.5rem;
+        }
+        .themed-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #d4af37; /* Gold bullet */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="handbook-container p-6 sm:p-8 md:p-12">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <svg class="kraken-sigil w-24 h-24 mx-auto mb-4 text-amber-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M13.28 3.47a.75.75 0 10-1.06 1.06l4.01 4.01-2.24 2.24a.75.75 0 001.06 1.06l2.5-2.5a.75.75 0 000-1.06l-4.27-4.27zm-2.62 1.06a.75.75 0 00-1.06-1.06L5.59 7.48 3.35 5.24a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l4.27-4.27zM3.47 10.72a.75.75 0 00-1.06 1.06l4.01 4.01 2.24-2.24a.75.75 0 10-1.06-1.06l-2.5 2.5a.75.75 0 000 1.06l4.27 4.27a.75.75 0 101.06-1.06L5.59 16.52l2.24-2.24a.75.75 0 00-1.06-1.06l-2.5 2.5a.75.75 0 000 1.06l4.27 4.27a.75.75 0 101.06-1.06L7.72 15.47l-4.25-4.75zM20.53 10.72a.75.75 0 00-1.06 1.06l-4.01 4.01-2.24-2.24a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l4.27-4.27a.75.75 0 10-1.06-1.06l-2.24 2.24-2.24-2.24a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l4.27-4.27zM12 1.25a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0V2a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+            </svg>
+            <h1 class="text-4xl md:text-5xl text-amber-400 tracking-wider">House Greyjoy</h1>
+            <p class="text-xl text-slate-300 tracking-widest mt-2">OFFICER HANDBOOK</p>
+        </header>
+
+        <!-- Introduction -->
+        <section class="mb-10 text-lg italic text-slate-400 text-center border-y-2 border-slate-700 py-6">
+            <p>"What is dead may never die, but rises again, harder and stronger."</p>
+        </section>
+
+        <section class="space-y-6">
+            <p>This document establishes a formal procedure for all Non-Commissioned Officers (NCOs) and Officers of House Greyjoy to use during training and other official events. It provides broad guidelines and recommendations on conducting these events, including suggested time limits for various activities.</p>
+            <p>Officers are encouraged to incorporate new exercises into their training sessions, as individual leadership styles and perspectives are valued.</p>
+            <p>All NCOs and Officers are required to read this handbook and adhere to its mandatory protocols when hosting events or pursuing objectives during permadeath (PD) events. While this document is designed to answer most questions, every event—especially a PD—is unpredictable. Success will ultimately depend on an Officer's ability to adapt to situations as they see fit.</p>
+            <p>All Officers and NCOs must meet a weekly activity quota, lest they receive activity strikes, unless they have filed an Inactivity Notice / Leave of Absence (LOA). Any NCO wishing to progress to the rank of a commissioned officer will be evaluated on their performance and adherence to this handbook.</p>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <!-- Activity Quota -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6 text-center">Weekly Activity Quota</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left themed-table">
+                    <thead>
+                        <tr>
+                            <th class="p-4">Rank</th>
+                            <th class="p-4">Requirement</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-slate-800/50">
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-300">NCOs</td>
+                            <td class="p-4 text-slate-400">Host or Co-Host 2 Combat Trainings, 1 SSU, 1 Patrol</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-300">Lieutenants</td>
+                            <td class="p-4 text-slate-400">3 Trainings, 2 SSUs, 1 Patrol</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-300">Captains</td>
+                            <td class="p-4 text-slate-400">2 Trainings, 1 SSU, Fortnightly Retinue Activity Report</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <!-- Types of Events -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6 text-center">Types of Events</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h3 class="text-xl text-slate-300 mb-3">Trainings</h3>
+                    <ul class="themed-list text-left text-slate-400">
+                        <li>Combat Training</li>
+                        <li>Siege Training</li>
+                        <li>Internal Practice Raid</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl text-slate-300 mb-3">Permadeath Events</h3>
+                    <ul class="themed-list text-left text-slate-400">
+                        <li>Lordsport / Pyke Patrol</li>
+                        <li>Mock PD</li>
+                        <li>Skirmish</li>
+                        <li>Battle</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl text-slate-300 mb-3">Miscellaneous</h3>
+                    <ul class="themed-list text-left text-slate-400">
+                        <li>Inspection</li>
+                        <li>Non-PD Expedition</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <!-- Combat Trainings -->
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Combat Trainings</h2>
+            <p class="text-slate-400 italic">Combat training is intended for personnel ranked Man-At-Arms and above. For Sailors and Swabbies, please refer to the Auxiliary Training guide.</p>
+            
+            <div>
+                <h3 class="text-xl text-slate-300 mb-2">1. No-Hit Duels</h3>
+                <p class="text-slate-400">One person is designated the aggressor; their objective is to breach the defender's guard. The defender is forbidden from retaliating and must focus solely on parrying and dodging. <br><strong class="text-slate-500">(Duration: 5-10 minutes)</strong></p>
+            </div>
+
+            <div>
+                <h3 class="text-xl text-slate-300 mb-2">2. Team Fighting</h3>
+                <p class="text-slate-400">Divide the force into two teams, one distinguished by cloaks. Appoint team leaders, preferably from the leadership path or NCOs, to demonstrate their command skills. Separate voice channels (VCs) and conduct a best-of-three series. The presiding officer will decide if archers and crossbowmen are permitted. Cavalry is forbidden. <br><strong class="text-slate-500">(Duration: 15-25 minutes)</strong></p>
+            </div>
+
+            <div>
+                <h3 class="text-xl text-slate-300 mb-2">3. Free-For-All (FFA)</h3>
+                <p class="text-slate-400">Trainees will disperse across a designated area. On command, combat begins. The officer will spectate. If the last warrior standing displays exceptional skill, log their performance in your training log and notify the Reaver Captain for observation. <br><strong class="text-slate-500">(Duration: 10 minutes)</strong></p>
+            </div>
+
+            <div>
+                <h3 class="text-xl text-slate-300 mb-2">4. 1v1 Duels</h3>
+                <p class="text-slate-400">As a cool-down exercise, trainees will partner up and engage in duels to hone their individual combat prowess. <br><strong class="text-slate-500">(Duration: 10 minutes)</strong></p>
+            </div>
+            
+            <div>
+                <h3 class="text-xl text-slate-300 mb-2">5. Formations</h3>
+                <p class="text-slate-400">The final segment before dismissal. Briefly review standard formations: Two-Line Shield-to-Shield (STS), Four-Line STS, Columns, Shield Walls, and Wedges. Manage time effectively to ensure this section is concise.</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl text-slate-300 mb-2">Conclusion</h3>
+                <p class="text-slate-400">Take a screenshot of all trainees in an STS formation, including the VC if applicable. Log all trainees and their corresponding points on the spreadsheet. <br><strong class="text-slate-500">(Aim for a total training duration of 40-60 minutes. Do not allow sessions to extend unnecessarily.)</strong></p>
+            </div>
+        </section>
+        
+        <div class="themed-hr"></div>
+
+        <!-- Siege Training -->
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Siege Training</h2>
+            <p class="text-slate-400">Siege trainings are large-scale exercises conducted when attendance is high. The objective of these sessions is to familiarize all members of the house, from trainee to officer, with the defensive capabilities of Pyke and to identify any potential strategic weaknesses.</p>
+            <p class="text-slate-400">First, you will organize two teams: one in cloaks (attackers) and one in civilian clothing (defenders). Both teams may use archers and crossbowmen; however, cavalry is forbidden unless specifically permitted by the hosting officer. The defending team must hold a designated chokepoint for a set period. The defending team leader is responsible for allocating defences, archer positions, and troop placements. The main gate is not to be used; the attacking team must be stopped at the chokepoint. The attacking team leader must organize the offensive and their approach to the defensive line.</p>
+            <p class="text-slate-400">Conclude by having all participants form an STS line. Take a screenshot of the attendees and their usernames in the Voice Call (VC). Make notes of all weaknesses spotted in the defence so that they may be analyzed further for the benefit of Pyke.</p>
+            <p class="text-slate-400"><strong class="text-slate-500">(Aim for these trainings to last 30-45 minutes.)</strong></p>
+            <p class="text-slate-400 italic">N.B: Larger wargames, including the use of cavalry and gates, will be hosted by High Command members at a later date.</p>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <!-- Internal Practice Raids -->
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Internal Practice Raids</h2>
+            <p class="text-slate-400">Internal Practice Raids (IPRs) are large-scale internal events between House Greyjoy, or jointly with House Drumm. It is unlikely an NCO or Lieutenant will host this event, but they may co-host. These events facilitate larger-scale battle practice, preparing our members for actual skirmishes or battles in a less stressful environment than a formal raid against another House.</p>
+            <p class="text-slate-400">The Host will divide the participants into teams, typically led by Captains or higher ranks from either House. Both forces will assemble outside Pyke in an open area, with each team taking a side. After a countdown, the battle begins. The first to three victories wins. Record all attendees in the VC/Stage and log the event. Afterward, all Officers must analyze the strategies of both the winning and losing sides to foster improvement.</p>
+            <p class="text-slate-400 italic">These should be hosted on a bi-weekly basis.</p>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <!-- Permadeath Events -->
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Lordsport & Pyke Patrols</h2>
+            <p class="text-slate-400">Patrols are common permadeath events that require minimal planning. These patrols often involve lore actors playing as civilians, merchants, or other factions. In some scenarios, they may introduce hostile elements such as pirates.</p>
+            <p class="text-slate-400">During a patrol, all officers are expected to maintain control of their retinue, ensuring soldiers adhere to guard posts or the patrol path designated by a Captain or higher. During night patrols, officers will enforce a buddy system to prevent individual soldiers from being isolated and eliminated by hostiles. Any suspicious individuals, such as those entering Pyke armed or refusing to disarm, must be reported immediately to a member of High Command.</p>
+            <p class="text-slate-400">Officers must ensure their soldiers do not act with hostility or rudeness towards civilian actors. Such behaviour can damage the House's reputation and lead to negative consequences. Our conduct towards lore actors is crucial for maintaining a positive standing.</p>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Mock Permadeath Events</h2>
+            <p class="text-slate-400">Mock PDs are temporary test events hosted before the official lore launch. They carry no serious consequences. Officers are expected to follow standard patrol protocols for all Mock PDs.</p>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Skirmishes</h2>
+            <p class="text-slate-400">Skirmishes are any non-ticketed PD engagements. These must be taken with the utmost seriousness, as there are no respawns. Skirmishes will typically involve pirates or other hostile lore actor bands, occurring as port raids in Lordsport or engagements at the Stepstones. They may also manifest as a PD attack from another House.</p>
+            <p class="text-slate-400">Pirate bands are usually composed of lore actors who are often familiar with one another, making them a formidable force that should not be underestimated. Orders will be issued in a stage VC by High Command (The Lord, Lord Captain, etc.). As an officer, you may use your `/shout` ability to relay orders to your men. During these battles, officers will typically not issue independent commands but are expected to enforce High Command's orders using the in-game shout tool or text chat.</p>
+            <p class="text-slate-400">In the unlikely event you are isolated with your retinue and under attack, your primary objective is survival. Flee if possible. If a clean retreat is not feasible, you or your best soldiers should be prepared to sacrifice yourselves to save the majority. If there is no escape, you must rely on your siege training to hold a chokepoint for as long as possible.</p>
+        </section>
+
+        <div class="themed-hr"></div>
+        
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Battles</h2>
+            <p class="text-slate-400">Protocols for battles are the same as for skirmishes. Follow all orders from High Command without deviation.</p>
+        </section>
+        
+        <div class="themed-hr"></div>
+
+        <!-- Miscellaneous Events -->
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Inspections</h2>
+            <p class="text-slate-400">Inspections are brief events designed to assess the House's readiness and capabilities. They serve as a stress test to determine how many members can rally at an organized time, ready for engagement. Furthermore, inspections allow us to evaluate our men's ability to execute timed formation changes quickly and efficiently.</p>
+            <p class="text-slate-400">The inspection begins with a large Shield-to-Shield (STS) formation with PTS active. You will then direct the members to form various columns and rows of varying sizes to test their speed and discipline.</p>
+            <p class="text-slate-400">Should a member be disruptive, first issue a verbal reprimand. If the behaviour continues, follow with a point deduction on the activity roster. Persistent disruption will result in dismissal from the event and a demotion by one rank. You must log all evidence if such disciplinary action is taken.</p>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <section class="mb-12 space-y-8">
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Non-PD Expeditions</h2>
+            <p class="text-slate-400">Expeditions count as "patrols" for activity quotas but are more akin to leisurely adventures across the map. They serve as a fun alternative to standard training for all participants.</p>
+            <p class="text-slate-400">First, have all members form an STS line and assess how many (Reaver+ rank) can spawn a horse. If numbers are insufficient, request assistance from other Reavers or Officers to help with transport.</p>
+            <p class="text-slate-400">Next, travel to your intended map via boat and begin the march to your destination. You must maintain a calm and stable demeanour when interacting with other houses, especially on their lands. You are responsible for your men's actions outside of Pyke and will be held accountable for any issues that arise.</p>
+            <p class="text-slate-400">Ensure all members are accounted for before returning to Pyke. Do not leave anyone behind. If a soldier is left behind, it is your responsibility to retrieve them.</p>
+            <p class="text-slate-400 italic">N.B: Do not instigate conflict with other houses. Raising tensions is not ideal at this early stage.</p>
+        </section>
+
+        <div class="themed-hr"></div>
+
+        <section>
+            <h2 class="text-2xl md:text-3xl text-amber-400 mb-6">Officer Etiquette</h2>
+            <p class="text-slate-400">To Be Determined.</p>
+        </section>
+
+    </div>
+
+</body>
+</html>
